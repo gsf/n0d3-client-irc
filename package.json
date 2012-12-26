@@ -1,0 +1,18 @@
+{
+  "name": "n0d3-client-irc",
+  "version": "0.0.0",
+  "description": "An n0d3 client for IRC",
+  "homepage": "https://github.com/gsf/n0d3-client-irc",
+  "author" : "Gabriel Farrell <g@grrawr.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gsf/n0d3-client-irc.git"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "irc": "0.3.4"
+  },
+  "engines": {
+    "node": "0.8.x"
+  }
+}
