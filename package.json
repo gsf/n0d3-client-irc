@@ -8,7 +8,7 @@
     "type": "git",
     "url": "https://github.com/gsf/n0d3-client-irc.git"
   },
-  "main": "index.js",
+  "main": "irc.js",
   "dependencies": {
     "irc": "0.3.4"
   },
