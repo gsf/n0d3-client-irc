@@ -17,6 +17,7 @@ module.exports = function (opts) {
       // ex: /msg botName ping
       if (to === opts.nick) return re3;
     }
+    console.log('Connecting to ' + opts.network);
     client = new irc.Client(opts.network, opts.nick, opts);
     client.on('message', function (nick, to, text, message) {
       var commandText, command, re = commandCheck(to, text);
@@ -41,4 +42,3 @@ module.exports = function (opts) {
     return client;
   }
 };
-
