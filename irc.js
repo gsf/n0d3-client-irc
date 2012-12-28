@@ -33,6 +33,7 @@ module.exports = function (opts) {
             // otherwise say it in the channel and prepend the nick
             client.say(to, nick + ': ' + replyText);
           },
+          sender: nick,
           text: commandText  // commandText is everything after the command
         });
       }
