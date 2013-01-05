@@ -1,9 +1,9 @@
 var irc = require('irc');
 
-module.exports = function (opts) {
+module.exports = function(opts) {
   opts = opts || {};
   opts.floodProtection = opts.floodProtection || true;
-  return function (bot) {
+  return function(bot) {
     opts.nick = opts.nick || bot.name;
     var client;
     var re1 = RegExp('\\' + bot.commandPrefix + '(\\w+) *');
@@ -19,16 +19,17 @@ module.exports = function (opts) {
     }
     console.log('Connecting to ' + opts.network);
     client = new irc.Client(opts.network, opts.nick, opts);
-    client.on('message', function (nick, to, text, message) {
+    //client.on('raw', function(message) {console.log(message)});
+    client.on('message', function(nick, to, text, message) {
       var commandText, command, re = commandCheck(to, text);
       if (re) {
-        commandText = text.replace(re, function (match, p1) {
+        commandText = text.replace(re, function(match, p1) {
           command = '.' + p1;
           return '';
         });
         // second argument here is our nice command object
         client.emit(command, {
-          reply: function (replyText) {
+          reply: function(replyText) {
             // if sent directly to then just reply directly to
             if (to === opts.nick) return client.say(nick, replyText);
             // otherwise say it in the channel and prepend the nick
