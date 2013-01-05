@@ -1,6 +1,6 @@
 {
   "name": "n0d3-client-irc",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "An n0d3 client for IRC",
   "homepage": "https://github.com/gsf/n0d3-client-irc",
   "author": "Gabriel Farrell <g@grrawr.com>",
