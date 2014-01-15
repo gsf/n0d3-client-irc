@@ -10,7 +10,7 @@
   },
   "main": "irc.js",
   "dependencies": {
-    "irc": "git://github.com/gsf/node-irc.git#sasl"
+    "irc": "git@github.com:martynsmith/node-irc.git#ed2ef9"
   },
   "engines": {
     "node": "0.8.x"
